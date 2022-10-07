@@ -67,8 +67,6 @@ public void testSubmit(){
     obj1=new homePage(driver);
     homePage.submitBtn(driver);
 }
-
-
 @AfterTest
     public void afterTest()
 {
