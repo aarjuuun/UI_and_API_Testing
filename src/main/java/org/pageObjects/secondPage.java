@@ -1,4 +1,4 @@
-package org.ClearTrip;
+package org.pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
