@@ -1,4 +1,5 @@
-package org.pageObjects;
+package org.pagesObjects;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -8,11 +9,11 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class homePage {
-    public static WebDriver driver;
+    static WebDriver driver;
 
     //Constructor calling
     public homePage(WebDriver driver) {
-        homePage.driver =driver;
+        org.pageObjects.homePage.driver =driver;
     }
 
 
@@ -35,7 +36,7 @@ public class homePage {
     public static void selectBusinessCls(WebDriver driver) throws InterruptedException{
         driver.findElement(By.cssSelector("div.p-relative.br-4")).click();
         Thread.sleep(600);
-       driver.findElement(By.cssSelector("div.br-16.b-grey.py-1.px-3.lh-24.fs-3.d-inline-block.ml-4.mr-4.c-pointer")).click();
+        driver.findElement(By.cssSelector("div.br-16.b-grey.py-1.px-3.lh-24.fs-3.d-inline-block.ml-4.mr-4.c-pointer")).click();
         Thread.sleep(200);
     }
 
@@ -45,9 +46,9 @@ public class homePage {
         departure.click();
         departure.sendKeys("Ban");
         Thread.sleep(1000);
-        List<WebElement> departurecity = driver.findElements(By.xpath("//ul[@class='airportList']//li/div/div/div"));
+        List<WebElement> departureCity = driver.findElements(By.xpath("//ul[@class='airportList']//li/div/div/div"));
         Thread.sleep(1000);
-        for (WebElement element : departurecity) {
+        for (WebElement element : departureCity) {
             String inner = element.getAttribute("innerHTML");
             if (inner.contentEquals("BLR")) {
                 element.click();
@@ -92,7 +93,7 @@ public class homePage {
     //Select Date
     public static void dateSelector(WebDriver driver) throws InterruptedException {
         driver.findElement(By.xpath("//div[@class='fs-4 fw-500 c-inherit flex flex-nowrap ml-4']")).click();
-        driver.findElement(By.xpath("//div[@class='DayPicker-Month']//div[@aria-label='Fri Oct 07 2022']")).click();
+        driver.findElement(By.xpath("//div[@class='DayPicker-Month']//div[@aria-label='Mon Oct 10 2022']")).click();
         Thread.sleep(500);
     }
 

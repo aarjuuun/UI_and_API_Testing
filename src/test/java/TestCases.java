@@ -1,5 +1,6 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.pageObjects.homePage;
+import org.pagesObjects.homePage;
+import org.pagesObjects.flightSelection;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -8,10 +9,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.util.Iterator;
+import java.util.Set;
+
 public class TestCases
 {
     WebDriver driver;
     homePage obj1;
+    flightSelection obj2;
     public static String browser="Chrome";
 
 @BeforeTest
@@ -67,6 +72,30 @@ public void testSubmit(){
     obj1=new homePage(driver);
     homePage.submitBtn(driver);
 }
+@Test(priority = 6)
+public void testCheckbox() throws InterruptedException {
+    obj2=new flightSelection();
+    flightSelection.nonstopCheckbox(driver);
+}
+@Test(priority = 7)
+public void testBookBtn() throws InterruptedException {
+    obj2=new flightSelection();
+    flightSelection.bookBtn(driver);
+}
+@Test(priority = 8)
+public void testHandleWindow(){
+    String main_window = driver.getWindowHandle();
+    Set<String> s1 = driver.getWindowHandles();
+    Iterator<String> i1 = s1.iterator();
+    while (i1.hasNext()) {
+        String child_window = i1.next();
+        if (!main_window.equalsIgnoreCase(child_window)) {
+            driver.switchTo().window(child_window);
+            break;
+        }
+    }
+}
+
 @AfterTest
     public void afterTest()
 {
