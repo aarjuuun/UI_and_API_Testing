@@ -1,4 +1,4 @@
-package uiTesting.UI_Test_HardCoded.utilities;
+package uiTesting.UiTest_HardCoded.utilities;
 
 public class selectors {
 

@@ -1,4 +1,4 @@
-package uiTesting.UI_Test_DataDriven.pageObjectModels;
+package uiTesting.UiTest_DataDriven.pageObjectModels;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,7 +8,7 @@ import org.testng.Assert;
 import java.time.Duration;
 import java.util.List;
 
-public class searchFlightPage extends basePage {
+public class SearchFlightPage extends BasePage {
 
     //Logging in
     public static void login(WebDriver driver, String mailId,String pwd) throws InterruptedException {
@@ -32,9 +32,9 @@ public class searchFlightPage extends basePage {
         driver.findElement(By.xpath(myAccountBtn)).click();
     }
     public static void closeAds(WebDriver driver) throws InterruptedException {
-        if (driver.findElement(By.cssSelector("div.px-1.flex.flex-middle.nmx-1.pb-1")).isDisplayed()) //Assertions
+        if (driver.findElement(By.cssSelector(advertisement)).isDisplayed()) //Assertions
         {
-            driver.findElement(By.cssSelector("div.px-1.flex.flex-middle.nmx-1.pb-1")).click();
+            driver.findElement(By.cssSelector(advertisement)).click();
         }
         Thread.sleep(500);
     }
@@ -134,7 +134,6 @@ public class searchFlightPage extends basePage {
 
         }
     }
-
     //Submit Button
     public static void submitBtn(WebDriver driver)
     {

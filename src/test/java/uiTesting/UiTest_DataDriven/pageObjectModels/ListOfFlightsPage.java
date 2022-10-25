@@ -1,4 +1,4 @@
-package uiTesting.UI_Test_DataDriven.pageObjectModels;
+package uiTesting.UiTest_DataDriven.pageObjectModels;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class listOfFlightsPage extends basePage{
+public class ListOfFlightsPage extends BasePage {
 
     //Click on the non-stop checkBox
     public static void nonstopCheckbox(WebDriver driver) throws InterruptedException {

@@ -1,10 +1,10 @@
-package uiTesting.UI_Test_HardCoded;
+package uiTesting.UiTest_HardCoded;
 
-import uiTesting.UI_Test_HardCoded.pageObjectModel.flightSelectionPage;
-import uiTesting.UI_Test_HardCoded.pageObjectModel.homePage;
-import uiTesting.UI_Test_HardCoded.pageObjectModel.itineraryPage;
-import uiTesting.UI_Test_HardCoded.pageObjectModel.loginPage;
-import uiTesting.UI_Test_HardCoded.utilities.generalFunctions;
+import uiTesting.UiTest_HardCoded.pageObjectModel.flightSelectionPage;
+import uiTesting.UiTest_HardCoded.pageObjectModel.homePage;
+import uiTesting.UiTest_HardCoded.pageObjectModel.itineraryPage;
+import uiTesting.UiTest_HardCoded.pageObjectModel.loginPage;
+import uiTesting.UiTest_HardCoded.utilities.generalFunctions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -41,7 +41,7 @@ public class TestCases
     driver.manage().window().maximize();
     Thread.sleep(2000);
 }
-@Test(priority = 0)
+@Test
 public void homePageTest()throws InterruptedException{
     homePage.closeAds(driver);
     homePage.selectBusinessCls(driver);
@@ -107,10 +107,10 @@ public void itineraryPageTest()throws InterruptedException
 //@Test(priority = 10)
 //public void enterDetails() throws InterruptedException {
 //    generalFunctions.scrollDown(driver);
-//    itineraryPage.continueBtn(driver);
-//    itineraryPage.enterMobile(driver);
-//    itineraryPage.enterEmail(driver);
-//    itineraryPage.continue1Btn(driver);
+//    ItineraryPage.continueBtn(driver);
+//    ItineraryPage.enterMobile(driver);
+//    ItineraryPage.enterEmail(driver);
+//    ItineraryPage.continue1Btn(driver);
 //}
 @Test(priority = 4)
 public void loginTest() throws InterruptedException {

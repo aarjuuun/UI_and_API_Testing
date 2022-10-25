@@ -1,4 +1,4 @@
-package uiTesting.UI_Test_DataDriven.utilities;
+package uiTesting.UiTest_DataDriven.utilities;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;

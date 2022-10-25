@@ -1,11 +1,11 @@
-package uiTesting.UI_Test_HardCoded.pageObjectModel;
+package uiTesting.UiTest_HardCoded.pageObjectModel;
 
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import uiTesting.UI_Test_HardCoded.utilities.selectors;
+import uiTesting.UiTest_HardCoded.utilities.selectors;
 
 import java.util.List;
 

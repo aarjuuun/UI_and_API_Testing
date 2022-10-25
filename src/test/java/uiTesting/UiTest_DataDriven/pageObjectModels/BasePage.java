@@ -1,8 +1,9 @@
-package uiTesting.UI_Test_DataDriven.pageObjectModels;
+package uiTesting.UiTest_DataDriven.pageObjectModels;
 
-public class basePage {
+public class BasePage {
 
     static String continueWithEmailBtn ="//*[contains(text(),'Continue with Email')]";
+    static String advertisement = "div.px-1.flex.flex-middle.nmx-1.pb-1";
     static String enterEmailID="//input[@placeholder='Enter registered email address']";
     static String enterPwd="//input[@placeholder='Enter password']";
     static String loginBtn="//span[@class='fs-3 fw-550']";

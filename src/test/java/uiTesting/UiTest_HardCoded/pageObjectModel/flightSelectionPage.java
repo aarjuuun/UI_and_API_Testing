@@ -1,16 +1,16 @@
-package uiTesting.UI_Test_HardCoded.pageObjectModel;
+package uiTesting.UiTest_HardCoded.pageObjectModel;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import uiTesting.UI_Test_HardCoded.utilities.selectors;
+import uiTesting.UiTest_HardCoded.utilities.selectors;
 
 import java.time.Duration;
 
 public class flightSelectionPage {
-    //Select non stop flights
+    //Select non-stop flights
     public static void nonstopCheckbox(WebDriver driver) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));  //explicit wait
 

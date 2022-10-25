@@ -1,11 +1,11 @@
-package uiTesting.UI_Test_HardCoded.pageObjectModel;
+package uiTesting.UiTest_HardCoded.pageObjectModel;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import static uiTesting.UI_Test_HardCoded.utilities.selectors.*;
+import static uiTesting.UiTest_HardCoded.utilities.selectors.*;
 
 public class loginPage {
     public static void login(WebDriver driver) throws InterruptedException {

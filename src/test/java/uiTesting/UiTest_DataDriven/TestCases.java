@@ -1,4 +1,4 @@
-package uiTesting.UI_Test_DataDriven;
+package uiTesting.UiTest_DataDriven;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -8,15 +8,15 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import uiTesting.UI_Test_DataDriven.pageObjectModels.itineraryPage;
-import uiTesting.UI_Test_DataDriven.pageObjectModels.listOfFlightsPage;
-import uiTesting.UI_Test_DataDriven.pageObjectModels.searchFlightPage;
-import uiTesting.UI_Test_DataDriven.utilities.excelUtilities;
+import uiTesting.UiTest_DataDriven.pageObjectModels.ItineraryPage;
+import uiTesting.UiTest_DataDriven.pageObjectModels.SearchFlightPage;
+import uiTesting.UiTest_DataDriven.pageObjectModels.ListOfFlightsPage;
+import uiTesting.UiTest_DataDriven.utilities.excelUtilities;
 
 import java.io.IOException;
 
 
-public class testCases {
+public class TestCases {
     WebDriver driver;
     String link = "https://www.cleartrip.com/flights";
     String browser="Chrome";
@@ -41,10 +41,6 @@ public class testCases {
         driver.get(link);
         driver.manage().window().maximize();
     }
-//    @Test(dataProvider ="email_password",priority = 1)
-//    public void loginPage(String mail,String pwd) throws InterruptedException {
-//        searchFlightPage.login(driver,mail,pwd);
-//    }
 
     @Test(dataProvider = "searchFlight",priority =1)
     public void selectingFlight(String givenDeparture,
@@ -53,18 +49,18 @@ public class testCases {
                                 String actualArrival,
                                 String monthAndYear,
                                 String day,String CouponCode) throws InterruptedException {
-        searchFlightPage.closeAds(driver);
-        searchFlightPage.selectFlightClass(driver);
-        searchFlightPage.departureAirport(driver,givenDeparture,actualDeparture);
-        searchFlightPage.arrivalAirports(driver,givenArrival,actualArrival);
-        searchFlightPage.dateSelector(driver,monthAndYear,day);
-        searchFlightPage.submitBtn(driver);
-        listOfFlightsPage.nonstopCheckbox(driver);
-        listOfFlightsPage.bookBtn(driver);
-        itineraryPage.enterCouponCode(driver,CouponCode);
-        itineraryPage.scrollDown(driver);
-        itineraryPage.clickContinueBtn(driver);
-        itineraryPage.enterMobNumAndEmail(driver,"6235982345","arjunshyamarjuns@gmail.com");
+        SearchFlightPage.closeAds(driver);
+        SearchFlightPage.selectFlightClass(driver);
+        SearchFlightPage.departureAirport(driver,givenDeparture,actualDeparture);
+        SearchFlightPage.arrivalAirports(driver,givenArrival,actualArrival);
+        SearchFlightPage.dateSelector(driver,monthAndYear,day);
+        SearchFlightPage.submitBtn(driver);
+        ListOfFlightsPage.nonstopCheckbox(driver);
+        ListOfFlightsPage.bookBtn(driver);
+        ItineraryPage.enterCouponCode(driver,CouponCode);
+        ItineraryPage.scrollDown(driver);
+        ItineraryPage.clickContinueBtn(driver);
+        ItineraryPage.enterMobNumAndEmail(driver,"6235982345","arjunshyamarjuns@gmail.com");
 
 
     }

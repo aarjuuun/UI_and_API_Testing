@@ -1,4 +1,4 @@
-package uiTesting.UI_Test_HardCoded.utilities;
+package uiTesting.UiTest_HardCoded.utilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 

@@ -1,4 +1,4 @@
-package uiTesting.UI_Test_DataDriven.pageObjectModels;
+package uiTesting.UiTest_DataDriven.pageObjectModels;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 
-public class itineraryPage extends basePage{
+public class ItineraryPage extends BasePage {
 
 
     //Enter the coupon code for extra discount

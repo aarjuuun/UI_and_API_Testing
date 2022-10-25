@@ -1,4 +1,4 @@
-package uiTesting.UI_Test_HardCoded.pageObjectModel;
+package uiTesting.UiTest_HardCoded.pageObjectModel;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

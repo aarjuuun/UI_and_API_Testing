@@ -10,9 +10,14 @@ public class testCases {
     public static void implementGet()
     {
         GET_Request.checkStatusCode();
+        System.out.println("--------------------------------------------------------");
         GET_Request.getAllLogDetails();
+        System.out.println("--------------------------------------------------------");
         GET_Request.getInfoOfParticularUser();
+        System.out.println("--------------------------------------------------------");
         GET_Request.selectParticularUser();
+        System.out.println("--------------------------------------------------------");
+
     }
 
     @Test(description = "Implementing POST request")
